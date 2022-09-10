@@ -1,0 +1,25 @@
+cursor:
+  style:
+    shape: Beam
+
+font:
+  normal:
+    family: Cascadia Code
+    style: Regular
+
+  bold:
+    family: Cascadia Code
+    style: Bold
+
+  italic:
+    family: Cascadia Code
+    style: Italic
+
+  bold_italic:
+    family: Cascadia Code
+    style: Bold Italic
+  
+  size: 13
+
+window:
+  opacity: 1
