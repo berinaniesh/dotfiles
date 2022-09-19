@@ -1,6 +1,9 @@
 vim.o.number = true
+vim.o.guicursor = "n-v-c-sm:ver25,i-ci-ve:ver25,r-cr-o:hor20"
+vim.o.fileencoding = "utf8"
 vim.o.shiftwidth = 4
 vim.o.relativenumber = true
+vim.o.smartindent = true
 
 
 local ensure_packer = function()
