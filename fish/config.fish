@@ -7,8 +7,8 @@ set -Ux GOPATH /home/berinaniesh/Development/go
 set -Ux PATH $PATH /home/berinaniesh/Development/go/bin /home/berinaniesh/.bin
 set -Ux EDITOR nvim
 
-abbr ytda "youtube-dl -x -f 251"
-abbr ytdaxel "youtube-dl --external-downloader axel --external-downloader-args '-n 8'"
+abbr ytda "yt-dlp -x -f 251"
+abbr ytdaxel "yt-dlp --external-downloader axel --external-downloader-args '-n 8'"
 abbr fishedit "nvim /home/berinaniesh/.config/fish/config.fish"
 abbr lazygit 'git add . && git commit -m "update" && git push origin main'
 abbr swayedit 'nvim /home/berinaniesh/.config/sway/config'
