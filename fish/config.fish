@@ -2,6 +2,9 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+function ytad
+    yt-dlp -f 251 -x -N 8 -o "~/Music/%(title)s.%(ext)s" $argv
+    end
 
 set -Ux GOPATH /home/berinaniesh/Development/go
 set -Ux PATH $PATH /home/berinaniesh/Development/go/bin /home/berinaniesh/.bin
@@ -24,3 +27,6 @@ function gitpush
 	git commit -m $argv
 	git push origin main
 	end
+fish_add_path /home/berinaniesh/.cargo/bin/
+fish_add_path /home/berinaniesh/.bin
+
