@@ -2,6 +2,10 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+function ytads
+    yt-dlp --default-search ytsearchall: $argv --playlist-items 1 -f 251 -x -N 8 -o "~/Music/%(title)s.%(ext)s"
+    end
+
 function ytad
     yt-dlp -f 251 -x -N 8 -o "~/Music/%(title)s.%(ext)s" $argv
     end
