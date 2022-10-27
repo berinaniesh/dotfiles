@@ -1,10 +1,19 @@
 vim.o.number = true
 vim.o.guicursor = "n-v-c-sm:ver25,i-ci-ve:ver25,r-cr-o:hor20"
 vim.o.fileencoding = "utf8"
-vim.o.shiftwidth = 4
+vim.o.shiftwidth = 2
 vim.o.relativenumber = true
 vim.o.smartindent = true
 
+local function map(mode, lhs, rhs, opts)
+	local options = { noremap = true }
+	if opts then 
+		options = vim.tbl_extend("force", options, opts)
+	end
+	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
+
+map("n", "<F5>", ":!python graph1.py<CR><CR>")
 
 local ensure_packer = function()
   local fn = vim.fn
@@ -30,3 +39,5 @@ return require('packer').startup(function(use)
     require('packer').sync()
   end
 end)
+
+
