@@ -13,7 +13,7 @@ local function map(mode, lhs, rhs, opts)
 	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-map("n", "<F5>", ":w | :!python graph1.py<CR><CR>")
+map("n", "<F5>", ":w | :!python %<CR><CR>")
 
 local ensure_packer = function()
   local fn = vim.fn
