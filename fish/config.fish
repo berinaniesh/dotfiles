@@ -23,14 +23,18 @@ abbr alacrittyedit 'nvim /home/berinaniesh/.config/alacritty/alacritty.yml'
 alias compile "g++"
 alias nvimedit "nvim ~/.config/nvim/init.vim"
 
-abbr siteupdate "scp -r /home/berinaniesh/Development/berinaniesh.xyz/dst/* berinaniesh@berinaniesh.xyz:/home/berinaniesh/websites/berinaniesh.xyz/"
-
 
 function gitpush
 	git add .
 	git commit -m $argv
 	git push origin main
 	end
+
 fish_add_path /home/berinaniesh/.cargo/bin/
 fish_add_path /home/berinaniesh/.bin
 
+function ym
+    yt-dlp -f 251 -x ytsearch:$argv -o /tmp/tmp-yt-audio.opus
+    ffplay -nodisp -autoexit /tmp/tmp-yt-audio.opus
+    rm /tmp/tmp-yt-audio.opus
+    end
