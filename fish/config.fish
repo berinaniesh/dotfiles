@@ -21,7 +21,7 @@ abbr lazygit 'git add . && git commit -m "update" && git push origin main'
 abbr swayedit 'nvim /home/berinaniesh/.config/sway/config'
 abbr alacrittyedit 'nvim /home/berinaniesh/.config/alacritty/alacritty.yml'
 alias compile "g++"
-alias nvimedit "nvim ~/.config/nvim/init.vim"
+alias nvimedit "nvim ~/.config/nvim/init.lua"
 
 
 function gitpush
