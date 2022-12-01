@@ -38,3 +38,7 @@ function ym
     ffplay -nodisp -autoexit /tmp/tmp-yt-audio.opus
     rm /tmp/tmp-yt-audio.opus
     end
+
+function play
+    ffplay -autoexit -nodisp $argv
+    end
