@@ -4,11 +4,28 @@ end
 
 function ytads
     yt-dlp --default-search ytsearchall: $argv --playlist-items 1 -f 251 -x -N 8 -o "~/Music/%(title)s.%(ext)s"
-    end
+end
 
 function ytad
     yt-dlp -f 251 -x -N 8 -o "~/Music/%(title)s.%(ext)s" $argv
-    end
+end
+
+function gitpush
+	git add .
+	git commit -m $argv
+	git push origin main
+end
+
+function ym
+    yt-dlp -f 251 -x ytsearch:$argv -o /tmp/tmp-yt-audio.opus
+    ffplay -nodisp -autoexit /tmp/tmp-yt-audio.opus
+    rm /tmp/tmp-yt-audio.opus
+end
+
+function play
+    ffplay -autoexit -nodisp $argv
+end
+
 
 set -Ux GOPATH /home/berinaniesh/Development/go
 set -Ux PATH $PATH /home/berinaniesh/Development/go/bin /home/berinaniesh/.bin
@@ -20,25 +37,9 @@ abbr fishedit "nvim /home/berinaniesh/.config/fish/config.fish"
 abbr lazygit 'git add . && git commit -m "update" && git push origin main'
 abbr swayedit 'nvim /home/berinaniesh/.config/sway/config'
 abbr alacrittyedit 'nvim /home/berinaniesh/.config/alacritty/alacritty.yml'
+abbr nvimedit "nvim ~/.config/nvim/init.lua"
+abbr history "nvim ~/.local/share/fish/fish_history"
 alias compile "g++"
-alias nvimedit "nvim ~/.config/nvim/init.lua"
-
-
-function gitpush
-	git add .
-	git commit -m $argv
-	git push origin main
-	end
 
 fish_add_path /home/berinaniesh/.cargo/bin/
 fish_add_path /home/berinaniesh/.bin
-
-function ym
-    yt-dlp -f 251 -x ytsearch:$argv -o /tmp/tmp-yt-audio.opus
-    ffplay -nodisp -autoexit /tmp/tmp-yt-audio.opus
-    rm /tmp/tmp-yt-audio.opus
-    end
-
-function play
-    ffplay -autoexit -nodisp $argv
-    end
