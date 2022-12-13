@@ -18,7 +18,7 @@ end
 
 function ym
     yt-dlp -f 251 -x ytsearch:$argv -o /tmp/tmp-yt-audio.opus
-    ffplay -nodisp -autoexit /tmp/tmp-yt-audio.opus
+    mpv /tmp/tmp-yt-audio.opus
     rm /tmp/tmp-yt-audio.opus
 end
 
