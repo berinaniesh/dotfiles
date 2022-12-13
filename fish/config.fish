@@ -22,6 +22,12 @@ function ym
     rm /tmp/tmp-yt-audio.opus
 end
 
+function yv
+    yt-dlp ytsearch:$argv -o /tmp/tmp-yt-video.mkv
+    mpv /tmp/tmp-yt-audio.mkv
+    rm /tmp/tmp-yt-audio.mkv
+end
+
 function play
     ffplay -autoexit -nodisp $argv
 end
