@@ -23,9 +23,9 @@ function ym
 end
 
 function yv
-    yt-dlp ytsearch:$argv -o /tmp/tmp-yt-video.mkv
-    mpv /tmp/tmp-yt-audio.mkv
-    rm /tmp/tmp-yt-audio.mkv
+    yt-dlp ytsearch:$argv -o /tmp/tmp-yt-video.webm
+    mpv /tmp/tmp-yt-video.webm
+    rm /tmp/tmp-yt-video.webm
 end
 
 function play
