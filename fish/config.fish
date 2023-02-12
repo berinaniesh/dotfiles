@@ -17,7 +17,11 @@ function gitpush
 end
 
 function ym
-    yt-dlp -f 251 -x ytsearch:$argv -o /tmp/tmp-yt-audio.opus
+    for arg in $argv
+	set search_term $search_term $arg
+    end
+    set search_term (echo $search_term | string collect)
+    yt-dlp -f 251 -x ytsearch:$search_term -o /tmp/tmp-yt-audio.opus
     mpv /tmp/tmp-yt-audio.opus
     rm /tmp/tmp-yt-audio.opus
 end
@@ -32,6 +36,9 @@ function play
     ffplay -autoexit -nodisp $argv
 end
 
+function cp
+    rsync $argv[1] $argv[2] --info=progress2
+end
 
 set -Ux GOPATH /home/berinaniesh/Development/go
 set -Ux PATH $PATH /home/berinaniesh/Development/go/bin /home/berinaniesh/.bin
