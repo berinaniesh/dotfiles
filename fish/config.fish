@@ -37,7 +37,7 @@ function play
 end
 
 function cp
-    rsync $argv[1] $argv[2] --info=progress2
+    rsync -r $argv[1] $argv[2] --info=progress2
 end
 
 set -Ux GOPATH /home/berinaniesh/Development/go
@@ -53,6 +53,7 @@ abbr alacrittyedit 'nvim /home/berinaniesh/.config/alacritty/alacritty.yml'
 abbr nvimedit "nvim ~/.config/nvim/init.lua"
 abbr history "nvim ~/.local/share/fish/fish_history"
 alias compile "g++"
+alias sl "ls"
 
 fish_add_path /home/berinaniesh/.cargo/bin/
 fish_add_path /home/berinaniesh/.bin

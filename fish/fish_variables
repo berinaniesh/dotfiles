@@ -2,7 +2,7 @@
 # VERSION: 3.0
 SETUVAR --export EDITOR:nvim
 SETUVAR --export --path GOPATH:/home/berinaniesh/Development/go
-SETUVAR --export --path PATH:/home/berinaniesh/\x2elocal/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/berinaniesh/Development/go/bin\x1e/home/berinaniesh/\x2ebin
+SETUVAR --export --path PATH:/home/berinaniesh/\x2ebin\x1e/home/berinaniesh/\x2ecargo/bin\x1e/home/berinaniesh/\x2elocal/bin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/berinaniesh/Development/go/bin\x1e/home/berinaniesh/\x2ebin
 SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_alacrittyedit:nvim\x20/home/berinaniesh/\x2econfig/alacritty/alacritty\x2eyml
 SETUVAR _fish_abbr_fishedit:nvim\x20/home/berinaniesh/\x2econfig/fish/config\x2efish
@@ -40,4 +40,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/home/berinaniesh/\x2elocal/bin
+SETUVAR fish_user_paths:/home/berinaniesh/\x2ebin\x1e/home/berinaniesh/\x2ecargo/bin\x1e/home/berinaniesh/\x2elocal/bin
