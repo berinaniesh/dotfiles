@@ -17,11 +17,7 @@ function gitpush
 end
 
 function ym
-    for arg in $argv
-	set search_term $search_term $arg
-    end
-    set search_term (echo $search_term | string collect)
-    yt-dlp -f 251 -x ytsearch:$search_term -o /tmp/tmp-yt-audio.opus
+    yt-dlp -f 251 -x ytsearch:"$argv" -o /tmp/tmp-yt-audio
     mpv /tmp/tmp-yt-audio.opus
     rm /tmp/tmp-yt-audio.opus
 end
