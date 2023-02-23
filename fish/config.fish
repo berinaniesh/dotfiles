@@ -36,10 +36,6 @@ function play
     ffplay -autoexit -nodisp $argv
 end
 
-function cp
-    rsync -r $argv[1] $argv[2] --info=progress2
-end
-
 set -Ux GOPATH /home/berinaniesh/Development/go
 set -Ux PATH $PATH /home/berinaniesh/Development/go/bin /home/berinaniesh/.bin
 set -Ux EDITOR nvim
