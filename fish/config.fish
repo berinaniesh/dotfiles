@@ -17,15 +17,20 @@ function gitpush
 end
 
 function ym
-    yt-dlp -f 251 -x ytsearch:"$argv" -o /tmp/tmp-yt-audio
-    mpv /tmp/tmp-yt-audio.opus
-    rm /tmp/tmp-yt-audio.opus
+    set uuid (uuidgen)
+    set fname (string join '.' $uuid 'opus')
+    echo $fname
+    yt-dlp -f 251 -x ytsearch:"$argv" -o $uuid 
+    mpv $fname
+    rm $fname
 end
 
 function yv
-    yt-dlp ytsearch:$argv -o /tmp/tmp-yt-video.webm
-    mpv /tmp/tmp-yt-video.webm
-    rm /tmp/tmp-yt-video.webm
+    set uuid (uuidgen)
+    set fname (string join '.' $uuid 'webm')
+    yt-dlp ytsearch:$argv -o $uuid 
+    mpv --no-osd-bar $fname
+    rm $fname
 end
 
 function play
