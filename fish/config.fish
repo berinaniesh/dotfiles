@@ -18,8 +18,8 @@ end
 
 function ym
     set uuid (uuidgen)
-    set fname (string join '' '~/tmp/' $uuid '.opus')
-    set fpath (string join '' '~/tmp/' $uuid)
+    set fname (string join '' '/data/tmp/' $uuid '.opus')
+    set fpath (string join '' '/data/tmp/' $uuid)
     yt-dlp -f 251 -x ytsearch:"$argv" -o $fpath 
     mpv $fname
     rm $fname
@@ -27,8 +27,8 @@ end
 
 function yv
     set uuid (uuidgen)
-    set fname (string join '' '~/tmp/' $uuid '.webm')
-    set fpath (string join '' '~/tmp/' $uuid)
+    set fname (string join '' '/data/tmp/' $uuid '.webm')
+    set fpath (string join '' '/data/tmp/' $uuid)
     yt-dlp ytsearch:$argv -o $fpath
     mpv --no-osd-bar $fname
     rm $fname
