@@ -18,9 +18,9 @@ end
 
 function ym
     set uuid (uuidgen)
-    set fname (string join '.' $uuid 'opus')
-    echo $fname
-    yt-dlp -f 251 -x ytsearch:"$argv" -o $uuid 
+    set fname (string join '' '/tmp/' $uuid '.opus')
+    set fpath (string join '' '/tmp/' $uuid)
+    yt-dlp -f 251 -x ytsearch:"$argv" -o $fpath 
     mpv $fname
     rm $fname
 end
